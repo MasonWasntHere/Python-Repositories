@@ -1,1 +1,197 @@
-vampires dont say bleh bleh bleh
+# Aidan's information
+AR_Name = str("Aidan")
+AR_Age = float(17.2)
+AR_License = bool(False)
+AR_Grade = int(11)
+AR_Email = str("aidan@gmail.com")
+
+# Christopher's information
+CH_Name = str("Chirstopher")
+CH_Age = float(17.2)
+CH_License = bool(False)
+CH_Grade = int(11)
+CH_Email = str("chris@gmail.com")
+
+# Gavin's information
+GC_Name = str("Gavin")
+GC_Age = float(17.1)
+GC_License = bool(True)
+GC_Grade = int(11)
+GC_Email = str("gavin@gmail.com")
+
+# Jaiden's information
+JR_Name = str("Jaiden")
+JR_Age = float(16.5)
+JR_License = bool(False)
+JR_Grade = int(11)
+JR_Email = str("jaiden@gmail.com")
+
+# Leo's information
+LH_Name = str("Leo")
+LH_Age = float(17)
+LH_License = bool(True)
+LH_Grade = int(11)
+LH_Email = str("leo@gmail.com")
+
+# Mason's information
+MB_Name = str("Mason")
+MB_Age= float(17.1)
+MB_License = bool(False)
+MB_Grade = int(11)
+MB_Email = str("mason@gmail.com")
+
+# Marcos' information
+MP_Name = str("Marcos")
+MP_Age = float(16.7)
+MP_License = bool(False)
+MP_Grade = int(11)
+MP_Email = str("gavin@gmail.com")
+
+# Muntag's information
+MD_Name = str("Muntag")
+MD_Age = float(16.8)
+MD_License = bool(False)
+MD_Grade = int(11)
+MD_Email = str("gavin@gmail.com")
+
+# Nate's information
+NC_Name = str("Nate")
+NC_Age = float(16.9)
+NC_License = bool(False)
+NC_Grade = int(11)
+NC_Email = str("nate@gmail.com")
+
+# Ryan's information
+RS_Name = str("Ryan")
+RS_Age = float(17.3)
+RS_License = bool(True)
+RS_Grade = int(11)
+RS_Email = str("ryan@gmail.com")
+
+# Shahood's information
+SA_Name = str("Shahood")
+SA_Age = float(17.1)
+SA_License = bool(False)
+SA_Grade = int(11)
+SA_Email = str("shahood@gmail.com")
+
+# Prints AR ID Card Information
+print("+---------------------------------+")
+print("|         ID CARD                 |")
+print("+---------------------------------+")
+print(f"| Name      : {AR_Name}               |")
+print(f"| Age       : {AR_Age}                |")
+print(f"| Grade     : {AR_License}               |")
+print(f"| License   : {AR_Grade}                  |")
+print(f"| Email     : {AR_Email}     |")
+print("+---------------------------------+")
+
+# Prints CH ID Card Information
+print("+---------------------------------+")
+print("|         ID CARD                 |")
+print("+---------------------------------+")
+print(f"| Name      : {CH_Name}         |")
+print(f"| Age       : {CH_Age}                |")
+print(f"| Grade     : {CH_License}               |")
+print(f"| License   : {CH_Grade}                  |")
+print(f"| Email     : {CH_Email}     |")
+print("+---------------------------------+")
+
+# Prints GC ID Card Information
+print("+---------------------------------+")
+print("|         ID CARD                 |")
+print("+---------------------------------+")
+print(f"| Name      : {GC_Name}               |")
+print(f"| Age       : {GC_Age}                |")
+print(f"| Grade     : {GC_License}                |")
+print(f"| License   : {GC_Grade}                  |")
+print(f"| Email     : {GC_Email}     |")
+print("+---------------------------------+")
+
+# Prints AR ID Card Information
+print("+---------------------------------+")
+print("|         ID CARD                 |")
+print("+---------------------------------+")
+print(f"| Name      : {JR_Name}              |")
+print(f"| Age       : {JR_Age}                |")
+print(f"| Grade     : {JR_License}               |")
+print(f"| License   : {JR_Grade}                  |")
+print(f"| Email     : {JR_Email}    |")
+print("+---------------------------------+")
+
+# Prints LH ID Card Information
+print("+---------------------------------+")
+print("|         ID CARD                 |")
+print("+---------------------------------+")
+print(f"| Name      : {LH_Name}                 |")
+print(f"| Age       : {LH_Age}                |")
+print(f"| Grade     : {LH_License}                |")
+print(f"| License   : {LH_Grade}                  |")
+print(f"| Email     : {LH_Email}       |")
+print("+---------------------------------+")
+
+# Prints MB ID Card Information
+print("+---------------------------------+")
+print("|         ID CARD                 |")
+print("+---------------------------------+")
+print(f"| Name      : {MB_Name}               |")
+print(f"| Age       : {MB_Age}                |")
+print(f"| Grade     : {MB_License}               |")
+print(f"| License   : {MB_Grade}                  |")
+print(f"| Email     : {MB_Email}     |")
+print("+---------------------------------+")
+
+# Prints MP ID Card Information
+print("+---------------------------------+")
+print("|         ID CARD                 |")
+print("+---------------------------------+")
+print(f"| Name      : {MP_Name}              |")
+print(f"| Age       : {MP_Age}                |")
+print(f"| Grade     : {MP_License}               |")
+print(f"| License   : {MP_Grade}                  |")
+print(f"| Email     : {MP_Email}     |")
+print("+---------------------------------+")
+
+# Prints MD ID Card Information
+print("+---------------------------------+")
+print("|         ID CARD                 |")
+print("+---------------------------------+")
+print(f"| Name      : {MD_Name}              |")
+print(f"| Age       : {MD_Age}                |")
+print(f"| Grade     : {MD_License}               |")
+print(f"| License   : {MD_Grade}                  |")
+print(f"| Email     : {MD_Email}     |")
+print("+---------------------------------+")
+
+# Prints NC ID Card Information
+print("+---------------------------------+")
+print("|         ID CARD                 |")
+print("+---------------------------------+")
+print(f"| Name      : {NC_Name}                |")
+print(f"| Age       : {NC_Age}                |")
+print(f"| Grade     : {NC_License}               |")
+print(f"| License   : {NC_Grade}                  |")
+print(f"| Email     : {NC_Email}      |")
+print("+---------------------------------+")
+
+# Prints RS ID Card Information
+print("+---------------------------------+")
+print("|         ID CARD                 |")
+print("+---------------------------------+")
+print(f"| Name      : {RS_Name}                |")
+print(f"| Age       : {RS_Age}                |")
+print(f"| Grade     : {RS_License}                |")
+print(f"| License   : {RS_Grade}                  |")
+print(f"| Email     : {RS_Email}      |")
+print("+---------------------------------+")
+
+# Prints SA ID Card Information
+print("+---------------------------------+")
+print("|         ID CARD                 |")
+print("+---------------------------------+")
+print(f"| Name      : {SA_Name}             |")
+print(f"| Age       : {SA_Age}                |")
+print(f"| Grade     : {SA_License}               |")
+print(f"| License   : {SA_Grade}                  |")
+print(f"| Email     : {SA_Email}   |")
+print("+---------------------------------+")

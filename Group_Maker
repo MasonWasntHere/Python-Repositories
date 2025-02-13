@@ -1,0 +1,83 @@
+import random
+
+def shuffle_groups():
+    print("Welcome to the group shuffler!")
+    print("------------------------------")
+    print("Please enter in the number of how big you want your groups to be ranging from 2, 3, or 4:")
+    # Loop to ensure valid group size input
+    while True:
+        group_size = input().strip()
+
+        if group_size not in ['2', '3', '4']:  # Check for valid group size input
+            print("Invalid group size. Please enter 2, 3, or 4.")
+        else:
+            group_size = int(group_size)
+            break
+
+    # List of students
+    studentlist = ["Mason", "Aidan", "Nate", "Chrissy", "Leo", "Gavin", "Shahood", "Marcos", "Ryan", "Muntag", "Jaiden", "Jacob", "Eddie", "Mackenzie", "Chu", "Antonio", "David", "Mr.A", "Gekko", "Bobby"]
+
+    # Get the names to separate
+    while True:
+        print("Enter the first name to separate:")
+        name1 = input().strip()
+        print("Enter the second name to separate:")
+        name2 = input().strip()
+
+        # Check if the names are in the student list
+        if name1 not in studentlist or name2 not in studentlist:
+            print("One or both of the names are not in the student list. Please try again.")
+        elif name1 == name2:
+            print("The two names cannot be the same. Please enter different names.")
+        else:
+            break
+
+    # Remove the two names from the list so they aren't shuffled again
+    studentlist.remove(name1)
+    studentlist.remove(name2)
+
+    # Shuffle the remaining students
+    random.shuffle(studentlist)
+
+    # Create a list to hold the groups
+    groups = []
+
+    # Add the two specific names into separate groups
+    group1 = [name1]
+    group2 = [name2]
+
+    # Start adding other students to the groups
+    for student in studentlist:
+        if len(group1) < group_size:
+            group1.append(student)
+        elif len(group2) < group_size:
+            group2.append(student)
+        else:
+            # If both groups are full, start a new group
+            if len(groups) == 0 or len(groups[-1]) == group_size:
+                groups.append([student])
+            else:
+                groups[-1].append(student)
+
+    # Add the two groups to the groups list
+    groups.insert(0, group1)
+    groups.insert(1, group2)
+
+    # Print the groups
+    print("Your groups are:")
+    for group in groups:
+        print(group)
+
+def main():
+    while True:
+        shuffle_groups()
+
+        # Ask if the user wants to continue
+        print("\nDo you want to continue? (y/n):")
+        continue_choice = input().strip().lower()
+        if continue_choice != "y":
+            print("Goodbye!")
+            break
+
+# Run the main function
+main()

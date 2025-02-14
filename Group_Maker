@@ -4,7 +4,7 @@ def shuffle_groups():
     print("Welcome to the group shuffler!")
     print("------------------------------")
     print("Please enter in the number of how big you want your groups to be ranging from 2, 3, or 4:")
-    # Loop to ensure valid group size input
+    # Loop to make sure its either of the opitions
     while True:
         group_size = input().strip()
 
@@ -17,7 +17,7 @@ def shuffle_groups():
     # List of students
     studentlist = ["Mason", "Aidan", "Nate", "Chrissy", "Leo", "Gavin", "Shahood", "Marcos", "Ryan", "Muntag", "Jaiden", "Jacob", "Eddie", "Mackenzie", "Chu", "Antonio", "David", "Mr.A", "Gekko", "Bobby"]
 
-    # Get the names to separate
+    # Get the names to restrict together
     while True:
         print("Enter the first name of the first pair to separate (cap sensitive):")
         name1 = input().strip()

@@ -19,9 +19,9 @@ def shuffle_groups():
 
     # Get the names to separate
     while True:
-        print("Enter the first name to separate:")
+        print("Enter the first name of the first pair to separate (cap sensitive):")
         name1 = input().strip()
-        print("Enter the second name to separate:")
+        print("Enter the second name of the first pair to separate (cap sensitive):")
         name2 = input().strip()
 
         # Check if the names are in the student list
@@ -32,19 +32,36 @@ def shuffle_groups():
         else:
             break
 
-    # Remove the two names from the list so they aren't shuffled again
+    while True:
+        print("Enter the first name of the second pair to separate (cap sensitive):")
+        name3 = input().strip()
+        print("Enter the second name of the second pair to separate (cap sensitive):")
+        name4 = input().strip()
+
+        # Check if the names are in the student list
+        if name3 not in studentlist or name4 not in studentlist:
+            print("One or both of the names are not in the student list. Please try again.")
+        elif name3 == name4:
+            print("The two names cannot be the same. Please enter different names.")
+        else:
+            break
+
+    # Remove the four names from the list so they aren't shuffled again
     studentlist.remove(name1)
     studentlist.remove(name2)
-
+    studentlist.remove(name3)
+    studentlist.remove(name4)
     # Shuffle the remaining students
     random.shuffle(studentlist)
 
     # Create a list to hold the groups
     groups = []
 
-    # Add the two specific names into separate groups
+    # Add the four specific names into separate groups
     group1 = [name1]
     group2 = [name2]
+    group3 = [name3]
+    group4 = [name4]
 
     # Start adding other students to the groups
     for student in studentlist:
@@ -52,18 +69,24 @@ def shuffle_groups():
             group1.append(student)
         elif len(group2) < group_size:
             group2.append(student)
+        elif len(group3) < group_size:
+            group3.append(student)
+        elif len(group4) < group_size:
+            group4.append(student)
         else:
-            # If both groups are full, start a new group
+            # If all four groups are full, start a new group
             if len(groups) == 0 or len(groups[-1]) == group_size:
                 groups.append([student])
             else:
                 groups[-1].append(student)
 
-    # Add the two groups to the groups list
+    # Adds the four groups to the groups list
     groups.insert(0, group1)
     groups.insert(1, group2)
+    groups.insert(2, group3)
+    groups.insert(3, group4)
 
-    # Print the groups
+    # Print the shuffled groups
     print("Your groups are:")
     for group in groups:
         print(group)
@@ -72,12 +95,11 @@ def main():
     while True:
         shuffle_groups()
 
-        # Ask if the user wants to continue
+        # Asks if the user wants to continue
         print("\nDo you want to continue? (y/n):")
         continue_choice = input().strip().lower()
         if continue_choice != "y":
             print("Goodbye!")
             break
 
-# Run the main function
 main()

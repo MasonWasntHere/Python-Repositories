@@ -4,7 +4,7 @@ def shuffle_groups():
     print("Welcome to the group shuffler!")
     print("------------------------------")
     print("Please enter in the number of how big you want your groups to be ranging from 2, 3, or 4:")
-    # Loop to make sure its either of the opitions
+    # Loops to make to sure the input was either of the numbers
     while True:
         group_size = input().strip()
 
@@ -17,14 +17,19 @@ def shuffle_groups():
     # List of students
     studentlist = ["Mason", "Aidan", "Nate", "Chrissy", "Leo", "Gavin", "Shahood", "Marcos", "Ryan", "Muntag", "Jaiden", "Jacob", "Eddie", "Mackenzie", "Chu", "Antonio", "David", "Mr.A", "Gekko", "Bobby"]
 
-    # Get the names to restrict together
+    # Displays a bank of the students names
+    print("List of students:")
+    for student in studentlist:
+        print(student)
+        
+    # Get the names to restrict
     while True:
         print("Enter the first name of the first pair to separate (cap sensitive):")
         name1 = input().strip()
         print("Enter the second name of the first pair to separate (cap sensitive):")
         name2 = input().strip()
 
-        # Check if the names are in the student list
+        # Checks to see if the names are in the student list
         if name1 not in studentlist or name2 not in studentlist:
             print("One or both of the names are not in the student list. Please try again.")
         elif name1 == name2:
@@ -43,6 +48,8 @@ def shuffle_groups():
             print("One or both of the names are not in the student list. Please try again.")
         elif name3 == name4:
             print("The two names cannot be the same. Please enter different names.")
+        elif {name1, name2} == {name3, name4}:
+            print("The second pair of names cannot be the same as the first pair. Please enter different names.")
         else:
             break
 

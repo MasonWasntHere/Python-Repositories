@@ -18,7 +18,7 @@ while True:
     # List of students
     studentlist = ["Mason", "Aidan", "Nate", "Chrissy", "Leo", "Gavin", "Shahood", "Marcos", "Ryan", "Muntag", "Jaiden", "Jacob", "Eddie", "Mackenzie", "Chu", "Antonio", "David", "Mr.A", "Gekko", "Bobby"]
 
-    # Display the list of students
+    # Display wordbank of students
     print("List of students:")
     for student in studentlist:
         print(student)
@@ -62,7 +62,7 @@ while True:
     # Shuffle the remaining students
     random.shuffle(studentlist)
 
-    # Create a list to hold the groups
+    # Creates a list to hold the groups
     groups = []
 
     # Add the four specific names into separate groups
@@ -71,7 +71,7 @@ while True:
     group3 = [name3]
     group4 = [name4]
 
-    # Start adding other students to the groups
+    # Starts adding unrestricted students to groups
     for student in studentlist:
         if len(group1) < group_size:
             group1.append(student)
@@ -94,12 +94,12 @@ while True:
     groups.insert(2, group3)
     groups.insert(3, group4)
 
-    # Print the shuffled groups
+    # Prints the made groups
     print("Your groups are:")
     for group in groups:
         print(group)
 
-    # Asks if the user wants to continue
+    # Asks if the user wants to make more groups
     print("\nDo you want to continue? (y/n):")
     continue_choice = input().strip().lower()
     if continue_choice != "y":

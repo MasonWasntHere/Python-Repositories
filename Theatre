@@ -1,15 +1,19 @@
 
 
-
 # variables
 NUM_COLUMNS = 8
 NUM_ROWS = 9   
 
-def display_seating(const int [][NUM_COLUMNS] int) # displays seating
+def display_seating(seats):
+    for row in seats:
+        print("Hello World!")
 
-def selectSeat(int array[][NUM_COLUMNS], int NUM_ROWS) # has user input seat row and column  
 
-def soldOut(const int array[][NUM_COLUMNS], int NUM_ROWS, bool $nomoretickets)
+def selectSeat(seats): # has user input seat row and column
+    try:
+        Row = int(input("Enter in row number (1-9): "))
+        Column = int(input("Enter in column number(1-8): "))
+        
 
 seats = [
         [   "$40", "$50", "$50", "$50", "$50", "$50", "$50", "$40", ]
@@ -22,3 +26,6 @@ seats = [
         [   "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$10", ]
         [   "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$10", ]
 ]
+
+
+print(seats)

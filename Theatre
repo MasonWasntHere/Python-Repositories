@@ -14,6 +14,9 @@ def selectSeat(seats): # has user input seat row and column
         Row = int(input("Enter in row number (1-9): "))
         Column = int(input("Enter in column number(1-8): "))
         
+        if seats[Row][Column] == 'X':
+            print("Sorry, this seat is taken. Please choose another."))
+        
 
 seats = [
         [   "$40", "$50", "$50", "$50", "$50", "$50", "$50", "$40", ]

@@ -1,9 +1,3 @@
-
-
-# variables
-NUM_COLUMNS = 8
-NUM_ROWS = 9   
-
 seats = [
     ["$40", "$50", "$50", "$50", "$50", "$50", "$50", "$40"],
     ["$30", "$30", "$40", "$50", "$50", "$40", "$30", "$30"],
@@ -14,15 +8,13 @@ seats = [
     ["$10", "$10", "$10", "$10", "$10", "$10", "$10", "$10"],
     ["$10", "$10", "$10", "$10", "$10", "$10", "$10", "$10"],
     ["$10", "$10", "$10", "$10", "$10", "$10", "$10", "$10"]
-]
-
-print(seats)
+]  # stores all the seats and costs
 
 while True:
 
-    def display_seating(seats):
+    def display_seating(seats): # function for printing the seats 
         for Row in seats:
-            print(" ".join(Row))
+            print(" ".join(Row)) # prints the seats
 
 
     def selectSeat(seats): # has user input seat row and column
@@ -30,11 +22,11 @@ while True:
             Row = int(input("Enter in row number (1-9): "))
             Column = int(input("Enter in column number(1-8): "))
 
-            if seats[Row][Column] == 'X':
+            if seats[Row][Column] == ' X ':
                 print("Sorry, this seat is taken. Please choose another.")
 
             else:
-                seats[Row][Column] = 'X'
+                seats[Row][Column] = ' X '  # turns following seat selected into a X
                 print("Seat selected successfully.")
         except (ValueError, IndexError):
             print("Invalid input. Please try again.")
@@ -42,4 +34,3 @@ while True:
 
     display_seating(seats)
     selectSeat(seats)
-    display_seating(seats)

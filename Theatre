@@ -4,9 +4,23 @@
 NUM_COLUMNS = 8
 NUM_ROWS = 9   
 
+seats = [
+    ["$40", "$50", "$50", "$50", "$50", "$50", "$50", "$40"],
+    ["$30", "$30", "$40", "$50", "$50", "$40", "$30", "$30"],
+    ["$20", "$20", "$30", "$40", "$40", "$30", "$20", "$20"],
+    ["$10", "$20", "$20", "$20", "$20", "$20", "$20", "$10"],
+    ["$10", "$20", "$20", "$20", "$20", "$20", "$20", "$10"],
+    ["$10", "$20", "$20", "$20", "$20", "$20", "$20", "$10"],
+    ["$10", "$10", "$10", "$10", "$10", "$10", "$10", "$10"],
+    ["$10", "$10", "$10", "$10", "$10", "$10", "$10", "$10"],
+    ["$10", "$10", "$10", "$10", "$10", "$10", "$10", "$10"]
+]
+
+print(seats)
+
 def display_seating(seats):
     for row in seats:
-        print("Hello World!")
+        print(" ".join(row))
 
 
 def selectSeat(seats): # has user input seat row and column
@@ -15,20 +29,15 @@ def selectSeat(seats): # has user input seat row and column
         Column = int(input("Enter in column number(1-8): "))
         
         if seats[Row][Column] == 'X':
-            print("Sorry, this seat is taken. Please choose another."))
-        
+            print("Sorry, this seat is taken. Please choose another.")
 
-seats = [
-        [   "$40", "$50", "$50", "$50", "$50", "$50", "$50", "$40", ]
-        [   "$30", "$30", "$40", "$50", "$50", "$40", "$30", "$30", ]
-        [   "$20", "$20", "$30", "$40", "$40", "$30", "$20", "$20", ]
-        [   "$10", "$20", "$20", "$20", "$20", "$20", "$20", "$10", ]
-        [   "$10", "$20", "$20", "$20", "$20", "$20", "$20", "$10", ]
-        [   "$10", "$20", "$20", "$20", "$20", "$20", "$20", "$10", ]
-        [   "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$10", ]
-        [   "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$10", ]
-        [   "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$10", ]
-]
+        else:
+            seats[row][column] = 'X'
+            print("Seat selected successfully.")
+    except (ValueError, IndexError):
+        print("Invalid input. Please try again.")
+        select_seat(seats)
 
-
-print(seats)
+display_seating(seats)
+selectSeat(seats)
+display_seating(seats)

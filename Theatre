@@ -18,26 +18,28 @@ seats = [
 
 print(seats)
 
-def display_seating(seats):
-    for row in seats:
-        print(" ".join(row))
+while True:
+
+    def display_seating(seats):
+        for Row in seats:
+            print(" ".join(Row))
 
 
-def selectSeat(seats): # has user input seat row and column
-    try:
-        Row = int(input("Enter in row number (1-9): "))
-        Column = int(input("Enter in column number(1-8): "))
-        
-        if seats[Row][Column] == 'X':
-            print("Sorry, this seat is taken. Please choose another.")
+    def selectSeat(seats): # has user input seat row and column
+        try:
+            Row = int(input("Enter in row number (1-9): "))
+            Column = int(input("Enter in column number(1-8): "))
 
-        else:
-            seats[row][column] = 'X'
-            print("Seat selected successfully.")
-    except (ValueError, IndexError):
-        print("Invalid input. Please try again.")
-        select_seat(seats)
+            if seats[Row][Column] == 'X':
+                print("Sorry, this seat is taken. Please choose another.")
 
-display_seating(seats)
-selectSeat(seats)
-display_seating(seats)
+            else:
+                seats[Row][Column] = 'X'
+                print("Seat selected successfully.")
+        except (ValueError, IndexError):
+            print("Invalid input. Please try again.")
+            select_seat(seats)
+
+    display_seating(seats)
+    selectSeat(seats)
+    display_seating(seats)
